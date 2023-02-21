@@ -1,24 +1,24 @@
-# 一键搭建Trojan-Go面板，配合使用CDN+Websocket，免费开启CDN隐藏自己VPS的真实IP，保护VPS永不被墙
+# 搭建Trojan/Trojan-Go，配合使用CDN+Websocket，免费开启CDN隐藏自己VPS的真实IP，保护VPS永不被墙
 
-### trojan多用户管理功能
-- 在线web页面和命令行两种方式管理trojan多用户
-- 启动 / 停止 / 重启 trojan 服务端
+### Trojan多用户管理功能
+- 在线web页面和命令行两种方式管理Trojan用户
+- 启动 / 停止 / 重启 Trojan 服务端
 - 支持流量统计和流量限制
 - 命令行模式管理, 支持命令补全
 - 集成acme.sh证书申请
 - 生成客户端配置文件
-- 在线实时查看trojan日志
-- 在线trojan和trojan-go随时切换
-- 支持trojan://分享链接和二维码分享(仅限web页面)
+- 在线实时查看Trojan日志
+- 在线Trojan和Trojan-go随时切换
+- 支持Trojan://分享链接和二维码分享(仅限web页面)
 - 支持转化为clash订阅地址并导入到clash_for_windows(仅限web页面)
 - 限制用户使用期限
 
 大神Jrohy的一键脚本支持Trojan-Go，相信在可靠性方面已经十分成熟。既然是一键脚本，我们只要有一台VPS，就可在上面很方便地安装部署。
 
 ## 准备工作
-1、VPS一台重置好主流的操作系统（例：Debian10 64）
+1、VPS一台重置好主流的操作系统（推荐：Debian10 64）
 
-2、域名一个（已经解析的域名，Win+R输入CMD 回车：键入ping 空格输入你的域名，检查一下是否可以ping通）
+2、域名一个（已经解析的域名，Win+R输入CMD 回车：键入ping 空格输入你的域名，检查一下是否可以ping通），域名推荐在Cloudflare解析。
 
 - 如果要使用Trojan-Go开启CND隐藏IP功能，需要将域名托管到CDN。
 点此>>[Cloudflare接管域名解析教程](https://youtu.be/1GtDTWybJNM)
@@ -67,10 +67,10 @@ macOS版下载地址: http://www.hostbuf.com/downloads/finalshell_install.pkg
 ### 安装过程中，会出现3次提示，请根据以下选项进行：
 
 - 1、第一次需要选择1. Let’s Encrypt证书
-   请输入申请证书的域名：host.kjxlu.com
+   请输入申请证书的域名：你自己的域名.xxx
    
 - 2、选择‘1. 安装docker版mysql’
-   回车或手动输入用户名
+   回车或手动输入用户名及密码（或者使用程序自动生成的也行）
    
 注：跑完以上代码后，最后会出现一个选择菜单，不用理会，直接回车退出即可，即回到#提示符的状态下。至此，Trojan-Go面板搭建完成。
 
